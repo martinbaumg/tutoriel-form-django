@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>mon premier formulaire sur les abrres</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
+{% extends 'base.html' %}
+<head>
+	<title>{% block title %}mon premier formulaire sur les abrres{% endblock %}</title>
+</head>
+{% block content %}
 		<form action method="POST">
 			{% csrf_token %}
 			{{form.as_p}}
-			
+			test
 			<input type="submit" name="" value="envoyer">
 		</form>
+{% endblock %}
 		
-		
-	</body>
-</html>
